@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 } else if (propertyPriceValue >= 250001 && propertyPriceValue <= 925000) {
                     sdlt = (250000 - 125000) * 0.02 + (propertyPriceValue - 250000) * 0.05;
                 } else if (propertyPriceValue >= 925001 && propertyPriceValue <= 1500000) {
-                    sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.075 + (propertyPriceValue - 925000) * 0.1;
+                    sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.05 + (propertyPriceValue - 925000) * 0.1;
                 } else if (propertyPriceValue > 1500000) {
-                    sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.075 + (1500000 - 925000) * 0.075 + (propertyPriceValue - 1500000) * 0.12;
+                    sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.05 + (1500000 - 925000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
                 }
                 console.log("Hello World");
             }
@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 250001 && propertyPriceValue <= 925000) {
                 sdlt = (250000 - 125000) * 0.02 + (propertyPriceValue - 250000) * 0.05;
             } else if (propertyPriceValue >= 925001 && propertyPriceValue <= 1500000) {
-                sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.075 + (propertyPriceValue - 925000) * 0.1;
+                sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.05 + (propertyPriceValue - 925000) * 0.1;
             } else if (propertyPriceValue > 1500000) {
-                sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.075 + (1500000 - 925000) * 0.075 + (propertyPriceValue - 1500000) * 0.12;
+                sdlt = (250000 - 125000) * 0.02 + (925000 - 250000) * 0.05 + (1500000 - 925000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
             }
         }
         stampDuty.textContent = `£ ${sdlt}`;
@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 175000 && propertyPriceValue <= 250000) {
                 lbtt = (propertyPriceValue - 175000) * 0.02;
             } else if (propertyPriceValue >= 250001 && propertyPriceValue <= 325000) {
-                lbtt = (250000 - 145000) * 0.02 + (propertyPriceValue - 250000) * 0.05;
+                lbtt = (250000 - 175000) * 0.02 + (propertyPriceValue - 250000) * 0.05;
             } else if (propertyPriceValue >= 325001 && propertyPriceValue <= 750000) {
-                lbtt = (250000 - 145000) * 0.02 + (325000 - 250000) * 0.05 + (propertyPriceValue - 325000) * 0.1;
+                lbtt = (250000 - 175000) * 0.02 + (325000 - 250000) * 0.05 + (propertyPriceValue - 325000) * 0.1;
             } else if (propertyPriceValue > 750000) {
-                lbtt = (250000 - 145000) * 0.02 + (325000 - 250000) * 0.05 + (750000 - 325000) * 0.1 + (propertyPriceValue - 750000) * 0.12;
+                lbtt = (250000 - 175000) * 0.02 + (325000 - 250000) * 0.05 + (750000 - 325000) * 0.1 + (propertyPriceValue - 750000) * 0.12;
             }
         } else {
             if (propertyPriceValue <= 145000) {
@@ -93,11 +93,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 225001 && propertyPriceValue <= 400000) {
                 ltt = (propertyPriceValue - 225000) * 0.06;
             } else if (propertyPriceValue >= 400001 && propertyPriceValue <= 750000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 ;
+                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075;
             } else if (propertyPriceValue >= 750001 && propertyPriceValue <= 1500000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 + (propertyPriceValue - 750001) * 0.1;
+                ltt = (400000 - 225000) * 0.6 + (750000-400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
             } else if (propertyPriceValue > 1500000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
+                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
             }
         } else {
             if (propertyPriceValue <= 225000) {
@@ -105,11 +105,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 225001 && propertyPriceValue <= 400000) {
                 ltt = (propertyPriceValue - 225000) * 0.06;
             } else if (propertyPriceValue >= 400001 && propertyPriceValue <= 750000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 ;
+                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075;
             } else if (propertyPriceValue >= 750001 && propertyPriceValue <= 1500000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 + (propertyPriceValue - 750001) * 0.1;
+                ltt = (400000 - 225000) * 0.6 + (750000-400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
             } else if (propertyPriceValue > 1500000) {
-                ltt = (400000 - 225000) * 0.02 + (400000 - 225000) * 0.06 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
+                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
             }
         }
         stampDuty.textContent = `£ ${ltt}`;
