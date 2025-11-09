@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.col-auto {
+  margin-top: 40px;
+}
+
 .form {
-    width: 40vw;
+  width: 50vw;
+  box-shadow: 10px 10px 30px rgb(14, 14, 14);
+}
+
+@media only screen and (max-width: 900px) {
+  .form {
+    width: 90vw;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .form {
-      width: 90vw;
-    }
 }

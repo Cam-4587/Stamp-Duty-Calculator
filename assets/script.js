@@ -6,6 +6,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const wales = document.getElementById("inlineRadio3");
     const firstTimeBuyer = document.getElementById("inlineCheckbox1");
     const stampDuty = document.getElementById("stampduty")
+    const clearButton = document.getElementById("clearbutton");
+
+    clearButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        propertyPrice.value = '';
+        engOrNI.checked = false;
+        scotland.checked = false;
+        wales.checked = false;
+        firstTimeBuyer.checked = false;
+        stampDuty.textContent = '';
+    });
 
     stampDutyForm.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -93,11 +104,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 225001 && propertyPriceValue <= 400000) {
                 ltt = (propertyPriceValue - 225000) * 0.06;
             } else if (propertyPriceValue >= 400001 && propertyPriceValue <= 750000) {
-                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075;
+                ltt = (400000 - 225000) * 0.06 + (750000 - 400000) * 0.075;
             } else if (propertyPriceValue >= 750001 && propertyPriceValue <= 1500000) {
-                ltt = (400000 - 225000) * 0.6 + (750000-400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
+                ltt = (400000 - 225000) * 0.6 + (750000 - 400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
             } else if (propertyPriceValue > 1500000) {
-                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
+                ltt = (400000 - 225000) * 0.06 + (750000 - 400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
             }
         } else {
             if (propertyPriceValue <= 225000) {
@@ -105,11 +116,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else if (propertyPriceValue >= 225001 && propertyPriceValue <= 400000) {
                 ltt = (propertyPriceValue - 225000) * 0.06;
             } else if (propertyPriceValue >= 400001 && propertyPriceValue <= 750000) {
-                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075;
+                ltt = (400000 - 225000) * 0.06 + (750000 - 400000) * 0.075;
             } else if (propertyPriceValue >= 750001 && propertyPriceValue <= 1500000) {
-                ltt = (400000 - 225000) * 0.6 + (750000-400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
+                ltt = (400000 - 225000) * 0.6 + (750000 - 400000) * 0.075 + (propertyPriceValue - 750001) * 0.1;
             } else if (propertyPriceValue > 1500000) {
-                ltt = (400000 - 225000) * 0.06 + (750000-400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
+                ltt = (400000 - 225000) * 0.06 + (750000 - 400000) * 0.075 + (1500000 - 750000) * 0.1 + (propertyPriceValue - 1500000) * 0.12;
             }
         }
         stampDuty.textContent = `£ ${ltt}`;
